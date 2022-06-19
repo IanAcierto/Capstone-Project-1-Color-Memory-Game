@@ -1,0 +1,43 @@
+body{
+  background-color: #131313;
+  color: white;
+  font-family: 'Nova Mono', monospace;
+  text-align: center;
+}
+.mode-container{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.container{
+  display:block;
+  width: 100%;
+  margin:auto;
+}
+.btn{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 25%;
+}
+.red{
+  background-color: #FF495C;
+}
+.blue{
+  background-color: #124E78
+}
+.green{
+  background-color: #8AEA92
+}
+.yellow{
+  background-color: #FFC100
+}
+.game-over{
+  background-color: #A72608;
+}
+.mode{
+  width:100px;
+  height:50px;
+  background-color: #9DB4AB;
+  border-radius: 75%;
+}
