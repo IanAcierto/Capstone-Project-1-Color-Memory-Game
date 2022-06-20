@@ -9,13 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
-  <div id = 'level-title' class="title">
-    <h1 id="color memory game">Color Memory Game</h1>
+  <div id = 'level-title'onload="onload()" class="title">
+    <h1 id=>Color Memory Game</h1>
     <h2 id="level-title">Please select a game mode to continue</h2>
     <div class="mode-container">
-      <div id="easy" class="btn mode easy-mode">
+      <div id="easy"onclick='startGame(5)' class="btn mode easy-mode">
         <p>easy</p>
       </div>
       <div id="medium" class="btn mode medium-mode">
@@ -24,7 +25,7 @@
       <div id="hard" class="btn mode hard-mode">
         <p>hard</p>
       </div>
-  </div>
+    </div>
   </div>
   <div class="container">
     <div class="row">
