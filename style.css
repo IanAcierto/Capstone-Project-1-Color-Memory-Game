@@ -1,6 +1,4 @@
-*{
-  border: 1px solid gold;
-}
+
 body{
   background-color: #131313;
   color: white;
@@ -35,6 +33,10 @@ body{
 .yellow{
   background-color: #FFC100
 }
+#startOver{
+  margin:auto;
+  text-transform:; 
+}
 .game-over{
   background-color: #A72608;
 }
@@ -45,8 +47,6 @@ body{
   border-radius: 75%;
 }
 .clicked{
-  size:70%
-}
-.hover{
-  
+  box-shadow: 0 0 20px white;
+  background-color: grey;
 }

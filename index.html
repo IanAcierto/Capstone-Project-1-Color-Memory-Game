@@ -8,21 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-  <div id = 'level-title'onload="onload()" class="title">
+  <div id = 'level-title' onload="onload()" class="title">
     <h1 id=>Color Memory Game</h1>
     <h2 id="level-title">Please select a game mode to continue</h2>
     <div class="mode-container">
-      <div id="easy"onclick='startGame(5)' class="btn mode easy-mode">
+      <div id="easy"onclick='startGame(5)' class="mode easy-mode">
         <p>easy</p>
       </div>
-      <div id="medium" class="btn mode medium-mode">
+      <div id="medium" onclick="startGame(10)" class="mode medium-mode">
         <p>medium</p>
       </div>
-      <div id="hard" class="btn mode hard-mode">
+      <div id="hard" onclick="startgame(15)" class="mode hard-mode">
         <p>hard</p>
       </div>
     </div>
@@ -36,12 +35,9 @@
       <div id="blue" class="btn blue"></div>
       <div id="yellow" class="btn yellow"></div>
     </div>
+    <div id="startOver" class="mode" onclick="startOver()"><p>restart</p></div>
   </div>
+ 
+  <script async defer src="script.js"></script>
 </body>
 </html>
-<!--
-  <title div difficulty select>
-  2 rows for desktop view
-  2 boxes
-  2 boxes
--->
