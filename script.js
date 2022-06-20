@@ -25,15 +25,23 @@ function startGame(maxlvl){
   console.log(`game started with ${maxlvl} levels`)
   return maxlvl;
 }
+//check if the player has chosen the right answer
 function checkAnswer(currentLevel){
   if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
     if(user.ClickedPattern.length === gamePattern.length){
+      //player wins the game
       if(level === maxlvl){
         document.getElementById('level-title').innerHTML = `congrats! you've won! click or tap anywhere to play again!`
         startOver();
         return;
       }
+      setTimeout((),1000)
     }
+  }
+  //player loses the game
+  else{
+    document.querySelector('body').classList.add('game-over')
+    document.querySelector('level-title').innerHTML = "Game Over, click or tap anywhere to play again!"
   }
 }
 //logic for starting the next level 
@@ -44,18 +52,30 @@ function nextSequence(){
   let randomNumber = Math.floor(Math.random()*4);
   let randomChosenColor = buttonColors[randomNumber];
   gamePattern.push(randomChosenColor);
+  fadeIn(300, randomChosenColor)
+  fadeOut(400, randomChosenColor)
+  console.log(`${randomChosenColor}`)
 }
 function startOver(){
 onload();
 started = false;
 }
 //animations
-function animatePress(){
-
+function animateClick(currentColor){
+  document.getElementById(currentColor).classList.add('clicked')
+  setTimeout(()=>{
+    document.getElementById(currentColor).classList.remove('clicked')
+  }, 100)
 }
-function fadeIn(){
-
+function fadeIn(time, id){
+  let fade = document.getElementById(id);
+  setTimeout(()=>{
+    fade.style.opacity=0.1
+  }, time)
 }
-function fadeOut(){
-  
+function fadeOut(time, id){
+  let fade = document.getElementById(id);
+  setTimeout(()=>{
+    fade.style.opacity=1
+  }, time)
 }
