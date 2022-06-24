@@ -41,8 +41,7 @@ function checkAnswer(currentLevel){
   }
   else{
     document.querySelector('body').classList.add('game-over')
-    document.querySelector('level-title').innerHTML = "Game Over, click or tap anywhere to play again!"
-    document.querySelector('body').addEventListener('click', onload())
+    document.getElementById('level-title').innerHTML = "Game Over!, click or tap restart to play again!"
   }
 }
 //logic for starting the next level 

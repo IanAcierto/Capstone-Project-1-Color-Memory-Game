@@ -33,10 +33,6 @@ body{
 .yellow{
   background-color: #FFC100
 }
-#startOver{
-  margin:auto;
-  text-transform:; 
-}
 .game-over{
   background-color: #A72608;
 }
