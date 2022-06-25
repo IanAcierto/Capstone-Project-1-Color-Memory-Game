@@ -29,7 +29,7 @@ function checkAnswer(currentLevel){
     if(userClickedPattern.length === gamePattern.length){
       //player wins the game
       if(level === maxlvl){
-        document.getElementById('level-title').innerHTML = `congrats! you've won!`
+        document.getElementById('level-title').innerHTML = `<h1>congrats! you've won!</h1>`;
         setTimeout(()=>{document.querySelector('body').addEventListener('click', startOver())}, 10000)
         return;
       }
@@ -52,6 +52,12 @@ function nextSequence(){
   document.getElementById('level-title').innerHTML = `level ${level}`
   let randomNumber = Math.floor(Math.random()*4);
   let randomChosenColor = buttonColors[randomNumber];
+  if(randomChosenColor === 'red'){
+    console.log('red', randomNumber);
+  }
+  else if(randomChosenColor === 'green'){
+    console.log('red');
+  }
   gamePattern.push(randomChosenColor);
   fadeIn(300, randomChosenColor)
   fadeOut(400, randomChosenColor)

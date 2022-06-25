@@ -12,6 +12,7 @@
 </head>
 <body>
   <div id = 'level-title' onload="onload()" class="title">
+    <!--this is kind of redundant because onload() takes care of generating this text but, i guess it's like a failsafe or sum-->
     <h1 id=>Color Memory Game</h1>
     <h2 id="level-title">Please select a game mode to continue</h2>
     <div class="mode-container">
@@ -28,14 +29,15 @@
   </div>
   <div class="container">
     <div class="row">
-      <div id="red" class="btn red"></div>
-      <div id="green" class="btn green"></div>
+      <div id="red" class="btn red">red</div>
+      <div id="green" class="btn green">green</div>
     </div>                                                                                    
     <div class="row">
-      <div id="blue" class="btn blue"></div>
-      <div id="yellow" class="btn yellow"></div>
+      <div id="blue" class="btn blue">blue</div>
+      <div id="yellow" class="btn yellow">yellow</div>
+      <div id="startOver" class="mode" onclick="startOver()"><p>restart</p></div>
     </div>
-    <div id="startOver" class="mode" onclick="startOver()"><p>restart</p></div>
+
   </div> 
   <script async defer src="script.js"></script>
 </body>
